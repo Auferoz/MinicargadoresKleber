@@ -1,11 +1,90 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Carrusel from '../components/Carrusel.astro';
+import Empresa from '../components/Empresa.astro';
+import Servicios from '../components/Servicios.astro';
+import Accesorios from '../components/Accesorios.astro';
+import Contacto from '../components/Contacto.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+
+	<section>
+		<Navbar />
+	</section>
+
+	<section>
+		<Carrusel />
+	</section>
+
+	<section class="h-auto-mh border" 
+		style="
+			background-image:url('./src/assets/img/Accesorios.jpg');
+			background-size:cover;
+			background-repeat: no-repeat;
+			background-position: center;
+		">
+
+		<Empresa />
+
+			<hr>
+
+		<Servicios />
+
+		<hr>
+
+		<Accesorios />
+
+	</section>
+	
+	<section class="h-auto-mh border" 
+		style="
+			background: linear-gradient(90deg, rgba(255,255,255,.9) 0%, rgba(255,255,255,.9) 100%), url('./src/assets/img/FondoTexto.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			color: white;
+		">
+		<Contacto />
+	</section>
+
 </Layout>
+
+<style is:global>
+
+	.text-shadow {
+		text-shadow: 1px 1px 3px #000000;
+	}
+
+	.h-auto-mh {
+		height: auto;
+		min-height: 500px;
+	}
+
+	.text-balance {
+		text-wrap: balance;
+	}
+
+	.bg-yellow {
+        background-color: #fee502;
+    }
+	.font-yellow {
+		color: #fee502;
+	}
+
+	.bg-first {
+		background: #0c0c0c;
+	}
+	.font-first {
+		color: #0c0c0c;
+	}
+
+    .bg-second {
+        background-color: #231f20;
+    }
+    .font-second {
+        color: #231f20;
+    }
+</style>

@@ -1,0 +1,68 @@
+---
+---
+
+<section id="Contactos">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="fw-bold fs-1 font-yellow text-shadow mb-4">
+                    Contacto
+                </h2>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <div class="col-12 col-lg-5">
+
+                <form role="form" action="../php/mailSend.php" method="post" class="w-100 bg-dark p-4 rounded-3">
+                    <div class="form-group m-2 mx-0">
+                        <label for="" class="fw-bold fs-6">Envianos una consulta.</label>
+                    </div>
+                    <div class="form-group m-2 mx-0">
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
+                    </div>
+                    <div class="form-group m-2 mx-0">
+                        <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido" required>
+                    </div>
+                    <div class="form-group m-2 mx-0">
+                        <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Telefono" required>
+                    </div>
+                    <div class="form-group m-2 mx-0">
+                        <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group m-2 mx-0">
+                        <textarea class="form-control" name="descripcion" id="descripcion" placeholder="Descripcion" maxlength="140" rows="4"></textarea>
+                    </div>
+
+                    <input type="submit" value="Enviar" class="btn btn-success w-100 btn-form">
+                </form>
+
+
+            </div>
+            <div class="col-12 col-lg-6 d-flex flex-column align-items-start justify-content-center">
+                <a class="fw-bold fs-4" href="tel:+56956497034">
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-phone"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" /></svg>
+                    +569 5649 7034
+                </a>
+                <a class="fw-bold fs-4" href="https://maps.app.goo.gl/jorULLKdRWohcmTa6">
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-map-pin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" /></svg>
+                    Dirección : Av. Inglaterra 1415, Independencia
+                </a>
+                <a class="fw-bold fs-4" href="mailto:minicargador27@gmail.com">
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-mail"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg>
+                    minicargador27@gmail.com
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    a {
+        text-decoration: none;
+        color: #0c0c0c;
+    }
+    a:hover {
+        color: #ac9b02;
+        text-decoration: underline;
+    }
+</style>
