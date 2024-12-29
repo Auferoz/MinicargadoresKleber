@@ -1,7 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
-import Carrusel from '../components/Carrusel.astro';
+import Navbar from '../components/shared/Navbar.astro';
+import Carrusel from '../components/shared/Carrusel.astro';
+import BgImageSection from '../components/shared/BgImageSection.astro';
 import Empresa from '../components/Empresa.astro';
 import Servicios from '../components/Servicios.astro';
 import Accesorios from '../components/Accesorios.astro';
@@ -11,6 +12,7 @@ import Contacto from '../components/Contacto.astro';
 
 <Layout>
 
+
 	<section>
 		<Navbar />
 	</section>
@@ -19,40 +21,44 @@ import Contacto from '../components/Contacto.astro';
 		<Carrusel />
 	</section>
 
-	<section class="h-auto-mh border" 
-		style="
-			background-image:url('../img/bg_MinicargadoresKleber_fondo.jpg');
-			background-size:cover;
-			background-repeat: no-repeat;
-			background-position: center;
-		">
+	<section class="h-auto-mh border bg-transparent">
 
-		<Empresa />
-
-			<hr>
-
-		<Servicios />
+		<article class="absolute w-full">
+			<BgImageSection />
+			<Empresa />
+		</article>
 
 		<hr>
 
-		<Accesorios />
+		<article>
+			<BgImageSection />
+			<Servicios />
+		</article>
+
+		<hr>
+
+		<article>
+			<BgImageSection />
+			<Accesorios />
+		</article>
 
 	</section>
 	
-	<section class="h-auto-mh border" 
-		style="
-			background: linear-gradient(90deg, rgba(255,255,255,.9) 0%, rgba(255,255,255,.9) 100%), url('../img/bg_MinicargadoresKleber_fondoTexto.jpg');
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: center;
-			color: white;
-		">
+	<section class="Contacto h-auto-mh border">
 		<Contacto />
 	</section>
 
 </Layout>
 
 <style is:global>
+
+	.Contacto {
+		background: linear-gradient(90deg, rgba(255,255,255,.9) 0%, rgba(255,255,255,.9) 100%), url('../img/bg_MinicargadoresKleber_fondoTexto.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		color: white;
+	}
 
 	.text-shadow {
 		text-shadow: 1px 1px 3px #000000;
