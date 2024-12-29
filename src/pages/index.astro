@@ -20,7 +20,7 @@ import Layout from '../layouts/Layout.astro';
 					</a>
 				</div>
 	
-				<div class="col-12 col-lg-6">
+				<div class="col-12 col-lg-6 mt-4 mt-lg-0">
 					<a href="transporteskleber">
 						<article class="img-L cursor-pointer border rounded-4 p-3">
 							<p class="text-white h3 font-monospace">
@@ -41,9 +41,15 @@ import Layout from '../layouts/Layout.astro';
 	.img-L img{
 		width: 100%;
 		height: auto;
-		max-height: 500px;
+		max-height: 482px;
 		object-fit: contain;
 		object-position: top;
+	}
+
+	@media (min-width: 1280px) {
+		.img-L img {
+			object-fit: cover;
+		}
 	}
 
 	.bg-sky-950 {
