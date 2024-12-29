@@ -8,19 +8,19 @@ $correo=$_POST['email'];
 $descripcion=$_POST['descripcion'];
 
 $mail = new PHPMailer();
-$mail->IsSMTP();                                      // Establecer envío SMTP
-$mail->Host = "mail.minicargadoreskleber.com";  // Especificar el servidor principal y de respaldo
-$mail->SMTPAuth = true;     // Activar la autenticación SMTP
-$mail->Username = "contacto@minicargadoreskleber.com";  // SMTP nombre de usuario
-$mail->Password = "Vanessa2019vane"; // SMTP contraseña
+$mail->IsSMTP();										// Establecer envío SMTP
+$mail->Host = "mail.minicargadoreskleber.com";  		// Especificar el servidor principal y de respaldo
+$mail->SMTPAuth = true;									// Activar la autenticación SMTP
+$mail->Username = "contacto@minicargadoreskleber.com";	// SMTP nombre de usuario
+$mail->Password = "Vanessa2019vane";					// SMTP contraseña
 
 $mail->From = "contacto@minicargadoreskleber.com";
 $mail->FromName = "Mailer";
-$mail->AddAddress("contacto@minicargadoreskleber.com", "Web");        // opcional
+$mail->AddAddress("contacto@minicargadoreskleber.com", "Web");			// opcional
 $mail->AddReplyTo("contacto@minicargadoreskleber.com", "Información");
 
 $mail->WordWrap = 50;
-$mail->IsHTML(true);                                  // Formato de correo electrónico listo para HTML
+$mail->IsHTML(true);
 
 $mail->Subject = "Mensaje desde la Web";
 $mail->Body    = "Nombre: $nombre <br> Apellido: $apellido <br> Telefono: $telefono <br> E-mail: $correo <br> Mensaje: $descripcion <br>";

@@ -1,0 +1,143 @@
+---
+import LayoutMinicargadoresKleber from '../layouts/LayoutMinicargadoresKleber.astro';
+
+import Navbar from '../components/shared/Navbar.astro';
+import Carrusel from '../components/shared/Carrusel.astro';
+import BgImageSection from '../components/shared/BgImageSection.astro';
+
+import Empresa from '../components/Empresa.astro';
+import Servicios from '../components/Servicios.astro';
+import Accesorios from '../components/Accesorios.astro';
+import Contacto from '../components/Contacto.astro';
+
+---
+
+<LayoutMinicargadoresKleber>
+
+
+	<section>
+		<Navbar title="Minicargadores Kleber" />
+	</section>
+
+	<section>
+		<Carrusel />
+	</section>
+
+	<section class="h-auto-mh border bg-transparent">
+
+		<article class="absolute w-full">
+			<BgImageSection />
+			<Empresa title="Arriendos de Minicargadores">
+					<p class="fs-4 text-balance" slot="first-text">
+						Aliados en el mercado de arriendos de minicargadores 
+						prestamos un servicio profesional con personal capacitado y 
+						presencia en todas la comunas de Santiago como en todo Chile, 
+						contamos con una amplia variedad minicargadores y accesorios 
+						para ayudarte en tu proyecto comunicate con nosotros y consulta 
+						nuestro stock.
+					</p>
+
+					<ul slot="second-text">
+						<li class="fs-4">
+							<strong>Atención 24 horas</strong> al día contamos con <strong>Operadores Profesionales</strong> 
+							<br class="d-none d-lg-block">
+							para apoyarte en tus trabajos en obras viales e inmobiliarias.
+						</li>
+						<li class="fs-4">
+							Trabajos en <strong>todas las Comunas</strong> de Santiago y fuera de Santiago
+						</li>
+						<li class="fs-4">
+							Minicargadores <strong>Bobcat s510 Nuevos</strong> y con sus mantenciones al dia
+						</li>
+					</ul>
+			</Empresa>
+		</article>
+
+		<hr>
+
+		<article>
+			<BgImageSection />
+			<Servicios />
+		</article>
+
+		<hr>
+
+		<article>
+			<BgImageSection />
+			<Accesorios />
+		</article>
+
+	</section>
+	
+	<section class="Contacto h-auto-mh border">
+		<Contacto />
+	</section>
+
+</LayoutMinicargadoresKleber>
+
+
+<style is:global>
+
+	.bg-sky-950 {
+		background-color: rgb(8 47 73 / var(--tw-bg-opacity, 1));
+	}
+
+	.h-screen {
+		height: 100vh;
+	}
+
+	.cursor-pointer {
+		cursor: pointer;
+	}
+
+	.screenHome {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+	}
+
+
+	.Contacto {
+		background: linear-gradient(90deg, rgba(255,255,255,.9) 0%, rgba(255,255,255,.9) 100%), url('../img/bg_MinicargadoresKleber_fondoTexto.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		color: white;
+	}
+
+	.text-shadow {
+		text-shadow: 1px 1px 3px #000000;
+	}
+
+	.h-auto-mh {
+		height: auto;
+		min-height: 500px;
+	}
+
+	.text-balance {
+		text-wrap: balance;
+	}
+
+	.bg-yellow {
+        background-color: #fee502;
+    }
+	.font-yellow {
+		color: #fee502;
+	}
+
+	.bg-first {
+		background: #0c0c0c;
+	}
+	.font-first {
+		color: #0c0c0c;
+	}
+
+    .bg-second {
+        background-color: #231f20;
+    }
+    .font-second {
+        color: #231f20;
+    }
+</style>

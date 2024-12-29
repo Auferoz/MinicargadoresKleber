@@ -1,0 +1,152 @@
+---
+import LayoutTransportesKleber from '../layouts/LayoutTransportesKleber.astro';
+
+import Navbar from '../components/shared/Navbar.astro';
+import Carrusel from '../components/shared/Carrusel.astro';
+import BgImageSection from '../components/shared/BgImageSection.astro';
+
+import Empresa from '../components/Empresa.astro';
+import Servicios from '../components/Servicios.astro';
+import Accesorios from '../components/Accesorios.astro';
+import Contacto from '../components/Contacto.astro';
+
+---
+
+<LayoutTransportesKleber>
+
+
+	<section>
+		<Navbar title="Transportes Kleber" />
+	</section>
+
+	<section>
+		<Carrusel />
+	</section>
+
+	<section class="h-auto-mh border bg-transparent">
+
+		<article class="absolute w-full">
+			<BgImageSection />
+			<Empresa title="Transportes Kleber">
+				<p class="fs-4 text-balance" slot="first-text">
+					<strong>Transportes y Arriendos Profesionales</strong>
+					<br><br>
+					En nuestra empresa somos especialistas en transporte de carga de 
+					hasta 3.600 kilos y arriendo de minicargadores con una amplia gama 
+					de accesorios para adaptarnos a tus necesidades. Ofrecemos soluciones 
+					para el manejo de materiales pesados y servicios de transporte de 
+					emergencia disponibles 24/7, asegurando atención inmediata y confiable,
+					Dentro y fuera de santiago.
+					<br><br>
+					Operamos en todas las comunas de Santiago y a lo largo de Chile, con 
+					personal altamente capacitado para garantizar un servicio profesional. 
+					<br>
+					<strong>¡Contáctanos y consulta nuestro stock disponible para tu proyecto!</strong>
+				</p>
+				
+
+				<ul slot="second-text">
+					<li class="fs-4">
+						Transportes de carga <strong>hasta 3.600 kilos</strong>, Vehiculos, Minicargadores.
+					</li>
+					<li class="fs-4">
+						Todo tipo material pesado.
+					</li>
+					<li class="fs-4">
+						Transporte de emergencia 24/7.
+					</li>
+					<li class="fs-4">
+						Dentro y fuera de santiago.
+					</li>
+				</ul>
+			</Empresa>
+		</article>
+
+		<hr>
+
+		<article>
+			<BgImageSection />
+			<Servicios />
+		</article>
+
+		<hr>
+
+		<article>
+			<BgImageSection />
+			<Accesorios />
+		</article>
+
+	</section>
+	
+	<section class="Contacto h-auto-mh border">
+		<Contacto />
+	</section>
+
+</LayoutTransportesKleber>
+
+
+<style is:global>
+
+	.bg-sky-950 {
+		background-color: rgb(8 47 73 / var(--tw-bg-opacity, 1));
+	}
+
+	.h-screen {
+		height: 100vh;
+	}
+
+	.cursor-pointer {
+		cursor: pointer;
+	}
+
+	.screenHome {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+	}
+
+
+	.Contacto {
+		background: linear-gradient(90deg, rgba(255,255,255,.9) 0%, rgba(255,255,255,.9) 100%), url('../img/bg_MinicargadoresKleber_fondoTexto.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		color: white;
+	}
+
+	.text-shadow {
+		text-shadow: 1px 1px 3px #000000;
+	}
+
+	.h-auto-mh {
+		height: auto;
+		min-height: 500px;
+	}
+
+	.text-balance {
+		text-wrap: balance;
+	}
+
+	.bg-yellow {
+        background-color: #fee502;
+    }
+	.font-yellow {
+		color: #fee502;
+	}
+
+	.bg-first {
+		background: #0c0c0c;
+	}
+	.font-first {
+		color: #0c0c0c;
+	}
+
+    .bg-second {
+        background-color: #231f20;
+    }
+    .font-second {
+        color: #231f20;
+    }
+</style>

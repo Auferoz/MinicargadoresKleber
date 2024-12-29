@@ -1,56 +1,71 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/shared/Navbar.astro';
-import Carrusel from '../components/shared/Carrusel.astro';
-import BgImageSection from '../components/shared/BgImageSection.astro';
-import Empresa from '../components/Empresa.astro';
-import Servicios from '../components/Servicios.astro';
-import Accesorios from '../components/Accesorios.astro';
-import Contacto from '../components/Contacto.astro';
 
 ---
 
 <Layout>
 
-
-	<section>
-		<Navbar />
-	</section>
-
-	<section>
-		<Carrusel />
-	</section>
-
-	<section class="h-auto-mh border bg-transparent">
-
-		<article class="absolute w-full">
-			<BgImageSection />
-			<Empresa />
-		</article>
-
-		<hr>
-
-		<article>
-			<BgImageSection />
-			<Servicios />
-		</article>
-
-		<hr>
-
-		<article>
-			<BgImageSection />
-			<Accesorios />
-		</article>
-
-	</section>
+	<section class="bg-sky-950 h-screen d-flex justify-content-center align-items-center">
+		<div class="container">
+			<div class="row justify-content-center align-items-center flex-row">
 	
-	<section class="Contacto h-auto-mh border">
-		<Contacto />
+				<div class="col-12 col-lg-6">
+					<a href="minicargadoreskleber">
+						<article class="img-L cursor-pointer border rounded-4 p-3">
+							<p class="text-white h3 font-monospace">
+								Minicargadores Kleber
+							</p>
+							<img class="img-fluid rounded" src="../../public/img/minicargadores.jpeg" alt="Minicargadores Kleber">
+						</article>
+					</a>
+				</div>
+	
+				<div class="col-12 col-lg-6">
+					<a href="transporteskleber">
+						<article class="img-L cursor-pointer border rounded-4 p-3">
+							<p class="text-white h3 font-monospace">
+								Transpórtes Kleber
+							</p>
+							<img class="img-fluid rounded" src="../../public/img/transportes.jpeg" alt="Transportes Kleber">
+						</article>
+					</a>
+				</div>
+			</div>
+		</div>
 	</section>
 
 </Layout>
 
 <style is:global>
+
+	.img-L img{
+		width: 100%;
+		height: auto;
+		max-height: 500px;
+		object-fit: contain;
+		object-position: top;
+	}
+
+	.bg-sky-950 {
+		background-color: rgb(8 47 73 / var(--tw-bg-opacity, 1));
+	}
+
+	.h-screen {
+		height: 100vh;
+	}
+
+	.cursor-pointer {
+		cursor: pointer;
+	}
+
+	.screenHome {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+	}
+
 
 	.Contacto {
 		background: linear-gradient(90deg, rgba(255,255,255,.9) 0%, rgba(255,255,255,.9) 100%), url('../img/bg_MinicargadoresKleber_fondoTexto.jpg');
