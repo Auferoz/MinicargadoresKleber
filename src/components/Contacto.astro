@@ -13,7 +13,7 @@
         <div class="row pt-lg-5">
             <div class="col-12 col-lg-5">
 
-                <form role="form" action="/php/mailSend.php" method="post" class="w-100 bg-dark p-4 rounded-3">
+                <form role="form" id="form" action="/php/mailSend.php" method="post" class="w-100 bg-dark p-4 rounded-3">
                     <div class="form-group m-2 mx-0">
                         <label for="" class="fw-bold fs-6">Envianos una consulta.. </label>
                     </div>
@@ -32,14 +32,9 @@
                     <div class="form-group m-2 mx-0">
                         <textarea class="form-control" name="descripcion" id="descripcion" placeholder="Descripcion" maxlength="140" rows="4"></textarea>
                     </div>
-                    <!-- Agregar el widget de reCAPTCHA -->
-                    <div class="g-recaptcha" data-sitekey="6LcBtaoqAAAAAHDGtOTqn6u23ns5PYw2HeiuGkAx"></div>
+
                     <input type="submit" value="Enviar" class="btn btn-success w-100 btn-form">
                 </form>
-                
-                <!-- Incluir el script de Google reCAPTCHA -->
-                <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-                
 
 
             </div>

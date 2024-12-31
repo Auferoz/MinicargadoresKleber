@@ -1,5 +1,6 @@
 ---
 import { ClientRouter } from "astro:transitions";
+import HeadMeta from "../components/shared/HeadMeta.astro";
 ---
 
 <!doctype html>
@@ -51,6 +52,9 @@ import { ClientRouter } from "astro:transitions";
 
 		<!-- Robots -->
 		<meta name="robots" content="index, follow">
+
+		<!-- HeadMeta  -->
+		<HeadMeta />
 
 		<ClientRouter />
 	</head>
