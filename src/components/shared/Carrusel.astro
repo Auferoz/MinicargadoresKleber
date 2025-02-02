@@ -2,33 +2,44 @@
 
 ---
 
-<div id="carouselMiniCargadoresKleberDesk" class="carousel slide border-top border-3 border-warning d-none d-lg-block">
+<div id="carouselTransporteKleber" class="carousel slide border-top border-3 border-warning">
     <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselMiniCargadoresKleberDesk" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <!-- <button type="button" data-bs-target="#carouselTransporteKleber" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button> -->
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="../img/bg_MinicargadoresKleber_Banner03.jpg" class="d-block w-100 h-448" alt="Imagen de Banner de Minicargadores Kleber">
-        </div>
-    </div>
-</div>
-
-
-<div id="carouselMiniCargadoresKleberMob" class="carousel slide border-top border-3 border-warning d-block d-lg-none">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselMiniCargadoresKleberMob" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    </div>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="../img/bg_MinicargadoresKleber_Banner03Mob.jpg" class="d-block w-100 h-448" alt="Imagen de Banner de Minicargadores Kleber">
+            <img src="../img/imagen_carrsl.jpg" class="d-block w-100 h-448" alt="Imagen de Banner de Transporte Kleber">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 text-start p-3 rounded-3">
+                <h5 class="mb-3">Transporte Kleber</h5>
+                <p class="m-0">Transportes de maquinaria pesada dentro y fuera de Santiago.</p>
+                <p class="m-0">Atencion las 24 Horas</p>
+            </div>
         </div>
     </div>
 </div>
 
 <style>
+
     .h-448 {
-        height: 448px;
+        height: auto;
         object-fit: cover;
-        object-position: bottom;
+        object-position: center;
+    }
+
+    @media (min-width: 1280px) {
+        .h-448 {
+            height: 448px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .carousel-caption {
+            bottom: 5%;
+            left: 5%;
+            width: fit-content;
+            text-align: left;
+            border: 1px solid #fee50c;
+            text-wrap: balance
+        }
     }
 </style>
