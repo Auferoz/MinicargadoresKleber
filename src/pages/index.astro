@@ -1,55 +1,171 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import LayoutTransportesKleber from '../layouts/LayoutTransportesKleber.astro';
+
+import Navbar from '../components/shared/Navbar.astro';
+import Carrusel from '../components/shared/Carrusel.astro';
+import BgImageSection from '../components/shared/BgImageSection.astro';
+
+import Empresa from '../components/Empresa.astro';
+import Contacto from '../components/Contacto.astro';
 
 ---
 
-<Layout>
+<LayoutTransportesKleber>
 
-	<section class="bg-sky-950 h-screen d-flex justify-content-center align-items-center">
-		<div class="container">
-			<div class="row justify-content-center align-items-center flex-row">
-	
-				<div class="col-12 col-lg-6">
-					<a href="minicargadoreskleber">
-						<article class="img-L cursor-pointer border rounded-4 p-3">
-							<p class="text-white h3 font-monospace">
-								Minicargadores Kleber
-							</p>
-							<img class="img-fluid rounded" src="../img/minicargadores.jpeg" alt="Minicargadores Kleber">
-						</article>
-					</a>
+
+	<section>
+		<Navbar title="Transportes Kleber" />
+	</section>
+
+	<section>
+		<Carrusel />
+	</section>
+
+	<section class="bg-transparent">
+
+		<article class="absolute w-full">
+			<BgImageSection />
+
+			<Empresa title="Transportes Kleber">
+				<p class="fs-4 text-balance" slot="first-text">
+					<strong>Transportes y Arriendos Profesionales</strong>
+					<br><br>
+					En nuestra empresa somos especialistas en transporte de carga de 
+					hasta 3.600 kilos. Ofrecemos soluciones 
+					para el manejo de materiales pesados y servicios de transporte de 
+					emergencia disponibles 24/7, asegurando atención inmediata y confiable,
+					Dentro y fuera de santiago.
+					<br><br>
+					Operamos en todas las comunas de Santiago y a lo largo de Chile, con 
+					personal altamente capacitado para garantizar un servicio profesional. 
+					<br>
+					<strong>¡Contáctanos y consulta nuestro stock disponible para tu proyecto!</strong>
+				</p>
+				
+
+				<div slot="second-text" class="row">
+					<div class="col-12 col-lg-6">
+						<ul>
+							<li class="fs-5 fs-lg-3">
+								Transportes de carga <strong>hasta 3.600 kilos</strong>, Vehiculos, Minicargadores.
+							</li>
+							<li class="fs-5 fs-lg-3">
+								Todo tipo <strong>material pesado.</strong>
+							</li>
+							<li class="fs-5 fs-lg-3">
+								Transporte de emergencia <strong>24/7.</strong>
+							</li>
+							<li class="fs-5 fs-lg-3">
+								<strong>Dentro y fuera</strong> de santiago.
+							</li>
+							<li class="fs-5 fs-lg-3">
+								<strong>Gruas express Santiago 24 horas</strong> autos motos maquinaria pesada
+							</li>
+							<li class="fs-5 fs-lg-3">
+								Ofrecemos servicio de transporte de <strong>material pesado, minicargadores, automoviles, motos, entre otros.</strong>
+							</li>
+						</ul>
+					</div>
+					<div class="col-12 col-lg-6">
+						<ul>
+							<li class="fs-5 fs-lg-3">
+								Servicio de gruas de emergencia, <strong>Llamanos en todo monento.</strong>
+							</li>
+							<li class="fs-5 fs-lg-3">
+								<strong>Transporte de motos</strong> y rescate 24/7
+							</li>
+							<li class="fs-5 fs-lg-3">
+								Transporte de <strong>maquinaria pesada</strong>
+							</li>
+							<li class="fs-5 fs-lg-3">
+								Contamos con grúas para <strong>atender siniestros</strong>
+							</li>
+							<li class="fs-5 fs-lg-3">
+								<strong>Servicio de transporte y grua 24/7</strong> en todas las comunas de Santiago. Asegurando una atencion de inmediata y confiable.
+							</li>
+						</ul>
+					</div>
 				</div>
-	
-				<div class="col-12 col-lg-6 mt-4 mt-lg-0">
-					<a href="transporteskleber">
-						<article class="img-L cursor-pointer border rounded-4 p-3">
-							<p class="text-white h3 font-monospace">
-								Transpórtes Kleber
-							</p>
-							<img class="img-fluid rounded" src="../img/transportes.jpeg" alt="Transportes Kleber">
-						</article>
-					</a>
+
+				<div class="col-12 col-md-6 pt-5 mt-lg-0" slot="imagenes-cols">
+					<img class="img-transporte w-100 border border-2 border-warning" src="../img/imagen_01_transporte_kleber.jpg" alt="Imagen de Cargadores Kleber">
+				</div>
+				
+				<div class="col-12 col-md-6 pt-5 mt-lg-0" slot="imagenes-cols">
+					<img class="img-transporte w-100 border border-2 border-warning" src="../img/imagen_02_transporte_kleber.jpg" alt="Imagen de Cargadores Kleber">
+				</div>
+
+			</Empresa>
+
+		</article>
+
+	</section>
+
+	<section class="bg-transparent align-items-center d-flex">
+		<BgImageSection />
+
+		<div class="container py-5">
+			<div class="row">
+				<div class="col-12 col-lg-3 text-center">
+					<svg  xmlns="http://www.w3.org/2000/svg"  width="200"  height="200"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-truck-delivery">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+						<path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+						<path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+						<path d="M5 17h-2v-4m-1 -8h11v12m-4 0h6m4 0h2v-6h-8m0 -5h5l3 5" />
+						<path d="M3 9l4 0" />
+					</svg>
+					<h2>
+						Transporte de Carga Exclusivos y Consolidados
+					</h2>
+				</div>
+				<div class="col-12 col-lg-3 text-center">
+					<svg  xmlns="http://www.w3.org/2000/svg"  width="200"  height="200"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-truck">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+						<path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+						<path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+						<path d="M5 17h-2v-11a1 1 0 0 1 1 -1h9v12m-4 0h6m4 0h2v-6h-8m0 -5h5l3 5" />
+					</svg>
+					<h2>
+						Mudanza
+					</h2>
+				</div>
+				<div class="col-12 col-lg-3 text-center">
+					<svg  xmlns="http://www.w3.org/2000/svg"  width="200"  height="200"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-building-warehouse">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+						<path d="M3 21v-13l9 -4l9 4v13" />
+						<path d="M13 13h4v8h-10v-6h6" />
+						<path d="M13 21v-9a1 1 0 0 0 -1 -1h-2a1 1 0 0 0 -1 1v3" />
+					</svg>
+					<h2>
+						Bodegas
+					</h2>
+				</div>
+				<div class="col-12 col-lg-3 text-center">
+					<svg  xmlns="http://www.w3.org/2000/svg"  width="200"  height="200"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-car"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+						<path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+						<path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+						<path d="M5 17h-2v-6l2 -5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6 -6h15m-6 0v-5" />
+					</svg>
+					<h2>
+						Traslado y Transporte de Vehículos
+					</h2>
 				</div>
 			</div>
 		</div>
+
+	</section>
+	
+	<section class="Contacto h-auto-mh border">
+		<Contacto />
 	</section>
 
-</Layout>
+</LayoutTransportesKleber>
+
 
 <style is:global>
 
-	.img-L img{
-		width: 100%;
-		height: auto;
-		max-height: 482px;
-		object-fit: contain;
-		object-position: top;
-	}
-
-	@media (min-width: 1280px) {
-		.img-L img {
-			object-fit: cover;
-		}
+	ul, li {
+		text-wrap: pretty;
 	}
 
 	.bg-sky-950 {
@@ -72,6 +188,27 @@ import Layout from '../layouts/Layout.astro';
 		gap: 2rem;
 	}
 
+	.img-transporte {
+		width: 100%;
+		max-width: 100%;
+		height: 350px;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	@media (min-width: 768px) {
+		.img-transporte {
+			object-position: center;
+		}
+	}
+
+	@media (min-width: 1280px) {
+		.img-transporte {
+			height: 435px;
+			object-position: 0px -160px;
+		}
+	}
+	
 
 	.Contacto {
 		background: linear-gradient(90deg, rgba(255,255,255,.9) 0%, rgba(255,255,255,.9) 100%), url('../img/bg_MinicargadoresKleber_fondoTexto.jpg');

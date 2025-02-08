@@ -1,4 +1,6 @@
 ---
+import ContactForm from "./shared/ContactForm.astro";
+
 ---
 
 <section id="Contactos">
@@ -13,28 +15,7 @@
         <div class="row pt-lg-5">
             <div class="col-12 col-lg-5">
 
-                <form role="form" id="form" action="/php/mailSend.php" method="post" class="w-100 bg-dark p-4 rounded-3">
-                    <div class="form-group m-2 mx-0">
-                        <label for="" class="fw-bold fs-6">Envianos una consulta.. </label>
-                    </div>
-                    <div class="form-group m-2 mx-0">
-                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
-                    </div>
-                    <div class="form-group m-2 mx-0">
-                        <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido" required>
-                    </div>
-                    <div class="form-group m-2 mx-0">
-                        <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Telefono" required>
-                    </div>
-                    <div class="form-group m-2 mx-0">
-                        <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
-                    </div>
-                    <div class="form-group m-2 mx-0">
-                        <textarea class="form-control" name="descripcion" id="descripcion" placeholder="Descripcion" maxlength="140" rows="4"></textarea>
-                    </div>
-
-                    <input type="submit" value="Enviar" class="btn btn-success w-100 btn-form">
-                </form>
+            <ContactForm />
 
 
             </div>
