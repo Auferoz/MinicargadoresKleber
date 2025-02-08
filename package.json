@@ -12,5 +12,8 @@
     "@astrojs/vercel": "^8.0.6",
     "astro": "^5.2.5",
     "resend": "^4.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.1"
   }
 }

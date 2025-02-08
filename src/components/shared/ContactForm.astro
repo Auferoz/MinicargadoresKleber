@@ -1,11 +1,56 @@
 ---
+import { actions } from "astro:actions";
 import MailShare from "../Icons/MailShare.astro";
+
+const result = Astro.getActionResult(actions.send);
+
+if (result?.data) {
+  return Astro.redirect("/");
+  // console.log(result.data);
+}
+
+if (result?.error) {
+  return Astro.redirect("/");
+  // console.log(result.error);
+}
 
 ---
 
 <div class="border border-3 rounded-3 bg-light p-4">
 
+  <form action={actions.send} method="POST">
 
+    <div class="mb-5">
+      <h4 class="text-dark">¡Envianos un mensaje y te contactaremos!</h4>
+    </div>
+
+    <div class="mb-3">
+      <label for="InputFullName" class="form-label text-dark fw-bold">Nombre Completo <span class="text-danger">*</span></label>
+      <input type="text" class="form-control" id="InputFullName" name="InputFullName" placeholder="Ej. Juan Perez" maxlength="40" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="InputPhone" class="form-label text-dark fw-bold">Teléfono <span class="text-danger">*</span></label>
+      <div class="input-group">
+        <span class="input-group-text">+56</span>
+        <input type="tel" class="form-control" id="InputPhone" name="InputPhone" placeholder="968425791" pattern="[0-9]{9}" maxlength="9" inputmode="numeric" required>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="InputEmail" class="form-label text-dark fw-bold">Email <span class="text-danger">*</span></label>
+      <input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Ej. tucorreo@email.com" maxlength="40" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="textarea" class="form-label text-dark fw-bold">Mensaje</label>
+      <textarea class="form-control" id="textarea" name="textarea" rows="4" maxlength="100"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary px-5 py-1 fw-bold">
+      Enviar <MailShare width="20" height="20" /> 
+    </button>
+
+  </form>
 
 </div>
-
