@@ -16,7 +16,7 @@ export const server = {
         handler: async ({ InputFullName, InputEmail, InputPhone, textarea }) => {
             const { data, error } = await resend.emails.send({
                 from: "Transportes Kleber <onboarding@resend.dev>",
-                to: ["minicargardores27@gmail.com"],
+                to: ["adesigns7@gmail.com"],
                 subject: "[Transportes Kleber] Nuevo Mensaje de Contacto",
                 html: `
                     <div style="max-width:600px;margin:0 auto;font-family:Arial, sans-serif;">
