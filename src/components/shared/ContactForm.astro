@@ -5,8 +5,8 @@ import MailShare from "../Icons/MailShare.astro";
 const result = Astro.getActionResult(actions.send);
 
 if (result?.data) {
-  // return Astro.redirect('/');
-  console.log(result.data);
+  return Astro.redirect('/');
+  // console.log(result.data);
 }
 
 if (result?.error) {
