@@ -16,10 +16,10 @@ export const server = {
         handler: async ({ InputFullName, InputEmail, InputPhone, textarea }) => {
             const { data, error } = await resend.emails.send({
                 from: "Transportes Kleber <contacto@transporteskleber.cl>",
-                to: ["minicargardores27@gmail.com"],
+                to: ["contacto@minicargadoreskleber.com"],
                 subject: "[Transportes Kleber] Nuevo Mensaje de Contacto",
                 html: `
-                    <div style="max-width:600px;margin:0 auto;font-family:Arial, sans-serif;">
+                    <div style="max-width:600px;margin:0 auto;font-family:Arial, sans-serif; padding: 32px 16px;">
                         <h2 style="color:#333;text-align: center;">📩 Nuevo Mensaje de Contacto</h2>
                         <div style="margin-bottom:15px;"><strong style="color:#555;">🧑‍💼 Nombre:</strong> ${InputFullName} </div>
                         <div style="margin-bottom:15px;"><strong style="color:#555;">📞 Teléfono:</strong> ${InputPhone} </div>
