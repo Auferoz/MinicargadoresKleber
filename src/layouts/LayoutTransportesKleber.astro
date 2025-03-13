@@ -65,6 +65,16 @@ import HeadMeta from "../components/shared/HeadMeta.astro";
 				"logo": "https://www.transporteskleber.cl/img/bg_TransporteKleber_Logo.png"
 			}
 		</script>
+
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16877654200"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'AW-16877654200');
+		</script>
 			
 
 		<!-- HeadMeta  -->
@@ -78,6 +88,13 @@ import HeadMeta from "../components/shared/HeadMeta.astro";
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 	</body>
+
+	<script>
+		gtag('event', 'conversion', {
+			'send_to': 'AW-16877654200/QiLaCPXCyKYaELih8u8-',
+			'transaction_id': ''
+		});
+	</script>
 </html>
 
 <style>
